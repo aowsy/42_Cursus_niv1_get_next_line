@@ -79,7 +79,7 @@ char	*get_next_line(int fd)
 {
 	size_t		i;
 	char		*rtn_line;
-	static char	*tmp_str[10240];
+	static char	*tmp_str[OPEN_MAX];
 
 	if ((fd < 0 || BUFFER_SIZE < 1) && ft_free_str(&tmp_str[fd]))
 		return (NULL);
